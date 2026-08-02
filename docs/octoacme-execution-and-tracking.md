@@ -15,6 +15,7 @@ Guidance for managing day-to-day execution and tracking progress toward project 
   - Include issue link and acceptance criteria in PR description
   - Run automated tests and linting in CI before requesting review
   - Require at least one approval before merging (or team-defined policy)
+  - When docs-only changes are made, mark PR with "docs" label and reference the relevant ISSUE_TEMPLATE entry.
 
 ## Quality & Testing
 - Unit tests for new logic
@@ -22,6 +23,22 @@ Guidance for managing day-to-day execution and tracking progress toward project 
 - End-to-end smoke tests for critical flows before release
 - Security scanning in CI
 - Manual QA for feature acceptance when needed
+
+## Documentation Maintenance (new)
+Purpose: ensure process documents are accurate, discoverable, and easy to change.
+
+- Where to add changes:
+  - All program process documents live under docs/
+  - Use `.github/ISSUE_TEMPLATE/add-update-content-to-process-docs.yml` to propose new content or updates.
+- Doc PR expectations:
+  - Provide a brief summary and rationale in the PR description.
+  - Link to the issue created by the ISSUE_TEMPLATE (or create one if special-case).
+  - Add at least one team reviewer (owner or domain expert).
+  - Use "docs" label and, if applicable, the relevant functional label (e.g., "process improvement").
+  - Small doc changes may be fast-tracked by the PM if non-controversial, but major changes should wait for at least one cross-functional review.
+- Publishing:
+  - After merge, update any relevant project boards and announce to stakeholders (weekly status or release notes as appropriate).
+  - Keep a short ChangeLog entry in the doc header or a central CHANGELOG for process docs when changes materially affect workflows.
 
 ## Reporting & Metrics
 - Track velocity and burndown
